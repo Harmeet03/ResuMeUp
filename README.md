@@ -36,8 +36,11 @@ Create a professional resume and personal portfolio in minutes with live preview
 
 ResuMeUp/
 ├── client/ # React frontend
+
 ├── server/ # Express backend
+
 ├── .env
+
 └── README.md
 
 📄 License
