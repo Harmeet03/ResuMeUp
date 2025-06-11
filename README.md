@@ -1,7 +1,7 @@
 # ResuMeUp
-# 🧾 Resume & Portfolio Builder
+# 🧾 Resume Builder
 
-Create a professional resume and personal portfolio in minutes with live preview, customizable fields, and instant PDF export. Built using the MERN stack (MongoDB, Express.js, React, Node.js).
+Create a professional resume and personal in minutes with live preview, customizable fields, and instant PDF export. Built using the MERN stack (MongoDB, Express.js, React, Node.js).
 
 ---
 
@@ -10,7 +10,6 @@ Create a professional resume and personal portfolio in minutes with live preview
 - 🔐 **User Authentication** (JWT-based)
 - 📝 **Dynamic Resume Builder** with live preview
 - 📄 **Instant PDF Export**
-- 💼 **Portfolio Section** with projects, links, and skills
 - 🎨 Clean, responsive UI (mobile + desktop friendly)
 - 🌑 Optional dark mode
 
