@@ -35,6 +35,7 @@ Create a professional resume and personal portfolio in minutes with live preview
 ## 📁 Project Structure
 
 ResuMeUp/
+
 ├── client/ # React frontend
 
 ├── server/ # Express backend
