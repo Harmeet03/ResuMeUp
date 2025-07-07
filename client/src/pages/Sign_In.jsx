@@ -50,7 +50,7 @@ const Sign_In = () => {
     return(
         <>
             <div className="flex flex-row">
-                <div className="w-1/2 min-h-screen sm:flex flex-col justify-center text-center gap-5 bg-[url('assets/design.png')] bg-cover text-white hidden">
+                <div className="w-1/2 min-h-screen sm:flex flex-col justify-center text-center gap-5 bg-[url('/assets/design.png')] bg-cover text-white hidden">
                     <h1 className="text-5xl px-2"> Build Your Resume in Minutes </h1>
                     <p className="text-xl px-4"> Create a stunning resume with a live preview and download it instantly as PDF. </p>
                 </div>
