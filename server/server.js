@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
     res.send("Welcome to ResuMeUp API");
 });
 
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
     console.log(`Visit http://localhost:${PORT}`);
 });

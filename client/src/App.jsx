@@ -9,6 +9,8 @@ import ProtectedRoute from './routes/ProtectedRoute.jsx'
 import AdminRoute from './routes/AdminRoute.jsx'
 import PublicRoute from './routes/PublicRoute.jsx'
 import Admin from './pages/Admin.jsx'
+import NotFound from './pages/NotFound.jsx'
+
 import './App.css'
 
 function App() {
@@ -21,28 +23,36 @@ function App() {
               <Home/>
             </PublicRoute>
           } />
+
           <Route path="/terms-condition" element={<Terms/>} />
+
           <Route path="/privacy-policy" element={<Privacy/>} />
+
           <Route path='/sign-in' element={
             <PublicRoute>
               <Sign_In/>
             </PublicRoute>
           }/>
+
           <Route path='/sign-up' element={
             <PublicRoute>
               <Sign_Up/>
             </PublicRoute>
           }/>
+          
           <Route path='/dashboard' element={
             <ProtectedRoute>
               <Dashboard/>
             </ProtectedRoute>
           }/>
+
           <Route path='/admin' element={
             <AdminRoute>
               <Admin/>
             </AdminRoute>
           }/>
+
+          <Route path='*' element={<NotFound/>}/>
         </Routes>
       </Router>
     </>

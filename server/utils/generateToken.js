@@ -16,17 +16,10 @@ const generateToken = (res, userId, userRole) => {
 
     res.cookie('token', token, {
         httpOnly: true,
-        secure: false,
-        sameSite: 'lax',    
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'strict',
         maxAge: 4 * 60 * 60 * 1000 // 4 hours
     });
-
-    // res.cookie('token', token, {
-    //     httpOnly: true,
-    //     secure: process.env.NODE_ENV === 'production',
-    //     sameSite: 'strict',
-    //     maxAge: 4 * 60 * 60 * 1000 // 4 hours
-    // });
 }
 
 export default generateToken;
