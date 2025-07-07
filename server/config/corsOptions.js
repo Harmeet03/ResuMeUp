@@ -1,0 +1,18 @@
+const allowedOrigins = [ 
+    'https://app-resumeup.netlify.app', 
+    'http://localhost:5173',
+    'http://192.168.1.5:5173'
+] 
+
+export const corsOptions = {
+    origin: (origin, callback) => {
+        if(!origin || allowedOrigins.includes(origin)){
+            callback(null, true);
+        }
+        else{
+            callback(new Error('Not allowed by CORS.'));
+        }
+    },
+
+    credentials: true
+}
