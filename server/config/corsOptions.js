@@ -1,6 +1,6 @@
 const allowedOrigins = [ 
-    'https://app-resumeup.netlify.app'
-    // 'http://localhost:5173'
+    'https://app-resumeup.onrender.com',
+    'http://localhost:5173'
 ] 
 
 export const corsOptions = {
