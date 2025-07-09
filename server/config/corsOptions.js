@@ -1,5 +1,5 @@
 const allowedOrigins = [ 
-    'https://app-resumeup.netlify.com'
+    'https://app-resumeup.netlify.app'
     // 'http://localhost:5173'
 ] 
 
