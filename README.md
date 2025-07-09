@@ -11,7 +11,6 @@ Create a professional resume and personal in minutes with live preview, customiz
 - 📝 **Dynamic Resume Builder** with live preview
 - 📄 **Instant PDF Export**
 - 🎨 Clean, responsive UI (mobile + desktop friendly)
-- 🌑 Optional dark mode
 
 ---
 
