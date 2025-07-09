@@ -26,7 +26,7 @@ Create a professional resume and personal in minutes with live preview, customiz
 - Express.js  
 - MongoDB + Mongoose  
 - JWT for auth  
-- html-pdf or Puppeteer (for PDF generation)
+- jsPDF & html2canvas (for PDF generation)
 
 ---
 
