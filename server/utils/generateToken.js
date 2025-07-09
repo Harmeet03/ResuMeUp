@@ -17,7 +17,7 @@ const generateToken = (res, userId, userRole) => {
     res.cookie('token', token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
-        sameSite: process.env.NODE_ENV === 'production' ? 'Lax' : 'Strict',
+        sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax',
         maxAge: 4 * 60 * 60 * 1000 // 4 hours
     });
 }
