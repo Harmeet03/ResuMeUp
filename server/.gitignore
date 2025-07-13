@@ -1,0 +1,6 @@
+# Ignore env files
+.env
+
+# Common ignores (optional)
+node_modules/
+.env.*
