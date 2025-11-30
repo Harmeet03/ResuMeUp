@@ -47,4 +47,4 @@ MIT
 
 ✨ Author
 Harmeet Singh
-📧 harmeet.dhanajal2003@gmail.com
+📧 harmeet.dhanjal2003@gmail.com
