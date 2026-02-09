@@ -5,7 +5,6 @@ const Terms = () => {
 
     return(
         <>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <div className="py-10 px-4 lg:w-250 sm:m-auto">
                 <span className="cursor-pointer fa fa-arrow-left mb-8" onClick={() => {to('/dashboard')}}> Back </span>
                 <h1 className="sm:text-4xl font-bold mb-4 text-3xl"> 📄 Terms & Conditions - ResuMeUp </h1>
