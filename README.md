@@ -1,5 +1,4 @@
-# ResuMeUp
-# 🧾 Resume Builder
+# 🧾 ResuMeUp (Resume Builder)
 
 Create a professional resume and personal in minutes with live preview, customizable fields, and instant PDF export. Built using the MERN stack (MongoDB, Express.js, React, Node.js).
 
@@ -34,17 +33,18 @@ Create a professional resume and personal in minutes with live preview, customiz
 
 ResuMeUp/
 
-├── client/ # React frontend
-
-├── server/ # Express backend
-
-├── .env
-
-└── README.md
+├── client/ # React frontend <br/>
+├── server/ # Express backend </br>
+├── .env <br/>
+└── README.md <br/>
 
 📄 License
 MIT
 
-✨ Author
+## 🎞️ Preview
+<img width="750" height="375" alt="cbd00430-61ea-4c68-9d83-293784fb0f7b" src="https://github.com/user-attachments/assets/76d8fbcc-5f09-4dc1-ac6f-c229c38ef7f4" /> <br/>
+https://app-resumeup.netlify.app/
+
+## ✨ Author
 Harmeet Singh
 📧 harmeet.dhanjal2003@gmail.com
