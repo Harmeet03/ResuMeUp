@@ -4,7 +4,7 @@ Create a professional resume and personal in minutes with live preview, customiz
 
 ---
 
-## 🚀 Features
+## 🚀 Features 
 
 - 🔐 **User Authentication** (JWT-based)
 - 📝 **Dynamic Resume Builder** with live preview
