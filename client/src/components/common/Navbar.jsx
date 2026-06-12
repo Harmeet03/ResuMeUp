@@ -1,7 +1,7 @@
-import logo from '../assets/logo.png';
+import logo from '../../assets/logo.svg';
 import { useNavigate } from 'react-router-dom';
-import { profile } from '../services/userAPI';
-import { logout } from '../services/authAPI'
+import { profile } from '../../services/userAPI';
+import { logout } from '../../services/authAPI'
 import { useState, useEffect } from 'react';
 
 const Navbar = () => {

@@ -1,82 +1,112 @@
-import logo from '../assets/logo.png';
-import resume from '../assets/resume.png';
-import preview from '../assets/preview.png';
-import pdf from '../assets/pdf.png';
-import details from '../assets/details.png';
-import customize from '../assets/customize.png';
-import downlaod from '../assets/download.png';
-import sample from '../assets/sample.png';
+import { ArrowRight } from 'lucide-react';
+import logo from '../assets/logo.svg';
+import Navbar from '../components/Home/Navbar';
 import { useNavigate } from 'react-router-dom';
+import DemoCard from '../components/Home/Cards/DemoCard';
+import WhyCard from '../components/Home/Cards/WhyCard';
+import Footer from '../components/Home/Footer';
 
 const Home = () => {
     const to = useNavigate()
+
     return(
-        <>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-            <div className='justify-items-center py-10'>
-                <img src={logo} className="w-40 m-auto"/>
-            </div>
-            <div className="text-center py-5">
-                <h1 className="px-2 text-4xl sm:text-5xl font-bold"> Build Your Resume in Minutes </h1>
-                <p className="text-lg sm:text-xl my-6 px-4 sm:w-100 m-auto"> Create a stunning resume with a live preview and download it instantly as PDF. </p>
-                <button className="bg-cyan-700 text-white p-4 rounded-xl cursor-pointer" onClick={() => {to('/sign-in')}}> Get Started </button>
-            </div>
+        <div className='text-foreground'>
+            <Navbar/> 
 
-            <div className="grid sm:grid-cols-3 p-10 gap-5 justify-items-center text-center lg:w-250 m-auto grid-cols-2">
-                <div className='justify-items-center'>
-                    <img src={resume} className='w-20'/>
-                    <h1 className="text-xl font-bold"> Easy Resume Form </h1>
-                    <p className="text-lg"> Fill out your details quickly </p>
-                </div>
-                <div className='justify-items-center'>
-                    <img src={preview} className='w-20'/>
-                    <h1 className="text-xl font-bold"> Live Preview </h1>
-                    <p className="text-lg"> See your resume as you type </p>
-                </div>
-                <div className='justify-items-center'>
-                    <img src={pdf} className='w-20'/>
-                    <h1 className="text-xl font-bold"> PDF Download </h1>
-                    <p className="text-lg"> Instant export to a professional-looking PDF </p>
-                </div>
-            </div>
-
-            <div className='flex flex-col lg:flex-row lg:w-250 gap-10 m-auto py-10'>
-                <div>
-                    <h1 className='text-2xl font-bold text-center'> How It Works </h1>
-                    <div className='text-center flex flex-row gap-1 sm:gap-5 p-10 items-center justify-center'>
-                        <div className='justify-items-center'>
-                            <img src={details} className='w-20 h-20'/>
-                            <h1> Fill in your details </h1>
+            <main className='bg-background text-foreground min-h-screen'>
+                <div className='flex w-full max-w-7xl mx-auto md:mt-19'>
+                    <div className='flex flex-col gap-4 w-full md:w-1/2 px-8 py-40 md:py-50'>
+                        <h1 className='text-6xl font-bold'> Build <span className='text-blue'>ATS-Friendly</span> Resumes in Minutes </h1>
+                        <p className='text-xl text-foreground/40'> Stand out with a professionally designed resume that passes every applicant tracking system. No design skills needed. </p>
+                        <button className='flex items-center cursor-pointer p-4 rounded-xl w-50 gap-2 bg-blue text-white' onClick={() => to('/sign-in')}> Create Resume free <ArrowRight size={20}/> </button>
+                    </div>
+    
+                    <div className='w-1/2 flex justify-center items-center hidden md:flex'>
+                        <DemoCard/>
+                    </div>
+                </div>   
+    
+                <hr/>
+    
+                <div className='bg-black py-16 px-4'>
+                    <div className='flex flex-col gap-16'>
+                        <div className='flex flex-col gap-8 text-center'>
+                            <h4 className='text-sm font-bold text-blue'> WHY RESUMEUP </h4>                    
+                            <h2 className='text-4xl font-bold'> Everything You Need to Land the Job </h2>
+                            <p className='text-foreground/40 text-xl max-w-lg mx-auto'> From first draft to download — a seamless experience designed for modern job seekers. </p>
                         </div>
-                        <span className='fa fa-arrow-right'/>
-                        <div className='justify-items-center'>
-                            <img src={customize} className='w-20 h-20'/>
-                            <h1> Customize your resume </h1>
-                        </div>
-                        <span className='fa fa-arrow-right'/>
-                        <div className='justify-items-center'>
-                            <img src={downlaod} className='w-20 h-20'/>
-                            <h1> Download and share </h1>
+                        
+                        <div className='max-w-5xl mx-auto'>
+                            <WhyCard/>
                         </div>
                     </div>
-                    <p className='text-gray-600 text-center text-xl'> "This saved me hours! <br/> Loved the clean design." <br/> - Harmeet Singh </p>
+                </div>   
+    
+                <hr/>
+    
+                <div className='py-16 px-4'>
+                    <div className='flex flex-col gap-16'>
+                        <div className='flex flex-col gap-8 text-center'>
+                            <h4 className='text-sm font-bold text-blue'> HOW IT WORKS </h4>                    
+                            <h2 className='text-4xl font-bold'> Three Steps to Your Dream Job </h2>
+                            <p className='text-foreground/40 text-xl max-w-lg mx-auto'> Simple, fast, and designed for everyone — from freshers to senior executives. </p>
+                        </div>
+                    </div>
+    
+                    <div className='flex flex-col sm:flex-row items-center gap-4 max-w-3xl mx-auto text-center py-10'>
+                        <div className='flex flex-col gap-2 items-center'>
+                            <span className='bg-blue rounded-full px-4 py-2 text-xl font-bold'> 1 </span>
+                            <h4 className='text-2xl font-bold'> Fill Your Details </h4>
+                            <p className='text-sm text-foreground/40'> Enter your experience, education, and skills using our smart guided form. </p>
+                        </div>
+                        
+                        <span> <ArrowRight className='rotate-90 sm:rotate-0'/> </span>
+    
+                        <div  className='flex flex-col gap-2 items-center'>
+                            <span className='bg-blue rounded-full px-4 py-2 text-xl font-bold'> 2 </span>
+                            <h4 className='text-2xl font-bold'> Choose a Template </h4>
+                            <p className='text-sm text-foreground/40'> Pick from our professionally designed, ATS-tested resume templates. </p>
+                        </div>
+    
+                        <span> <ArrowRight className='rotate-90 sm:rotate-0'/> </span>
+    
+                        <div  className='flex flex-col gap-2 items-center'>
+                            <span className='bg-blue rounded-full px-4 py-2 text-xl font-bold'> 3 </span>
+                            <h4 className='text-2xl font-bold'> Download PDF </h4>
+                            <p className='text-sm text-foreground/40'> Export your resume as a polished PDF and start applying immediately. </p>
+                        </div>
+                    </div>
+                </div>   
+    
+                <hr/>
+    
+                <div className='bg-black py-16 px-4'>
+                    <div className='flex flex-col gap-16'>
+                        <div className='flex flex-col gap-8 text-center'>
+                            <h4 className='text-sm font-bold text-blue'> TEMPLATES </h4>                    
+                            <h2 className='text-4xl font-bold'> Professionally Designed Layouts </h2>
+                            <p className='text-foreground/40 text-xl max-w-lg mx-auto'> Each template is crafted to impress — choose the one that fits your industry. </p>
+                        </div>
+                        
+                        <div className='max-w-5xl mx-auto'>
+    
+                        </div>
+                    </div>
+                </div>     
+                
+                <div className='py-10 bg-black'>
+                    <div className='flex flex-col gap-8 items-center text-center rounded-xl max-w-5xl mx-auto py-10 bg-blue/40'>
+                        <h4 className='text-sm font-bold text-blue'> START FREE TODAY </h4>                    
+                        <h2 className='text-4xl font-bold'> Ready to Land Your Dream Job? </h2>
+                        <p className='text-foreground/40 text-xl'> Join 12,000+ professionals who built their resume with ResuMeUp. No credit card required. </p>
+                        <button className='bg-foreground py-2 px-6 rounded-xl text-blue font-bold'> Launch Builder </button>
+                    </div>
                 </div>
-                <div className='justify-items-center'>
-                    <img src={sample} className='w-75 m-auto'/>
-                </div>
-            </div>
-
-            <div className='text-center py-10'>
-                <h1 className='text-3xl font-bold my-6 px-4'> Start Building Your Resume Now! </h1>
-                <button className='bg-cyan-700 text-white p-4 rounded-xl cursor-pointer' onClick={() => {to('/sign-in')}}> Launch Builder </button>
-            </div>
-
-            <footer className='flex flex-rows gap-10 justify-center py-5'>
-                <a href="mailto:harmeet.dhanjal2003@gmail.com"> Contact </a>
-                <a onClick={() => to('/terms-condition')} className='cursor-pointer'> Terms </a>
-                <a onClick={() => to('/privacy-policy')} className='cursor-pointer'> Privacy </a>
-            </footer>
-        </>
+    
+            </main>
+            
+            <Footer/>
+        </div>
     )
 }
 

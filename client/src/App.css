@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+:root {
+    --background: rgb(27, 25, 25);
+    --foreground: rgb(143, 143, 255);
+    --card: white;
+    --blue: blue;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-blue: var(--blue);
+}   
