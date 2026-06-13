@@ -17,7 +17,6 @@ const Navbar = () => {
             <div className='hidden sm:flex gap-8'>
                 <NavLink to={'/sign-in'}> Login </NavLink>
                 <NavLink to={'/sign-up'}> Register </NavLink>
-                <NavLink to={'/about'}> Who am I? </NavLink>
             </div>
 
             <button onClick={() => setOpen(!open)} className='sm:hidden'>
@@ -32,7 +31,6 @@ const Navbar = () => {
             }>
                 <NavLink to={'/sign-in'}> Login </NavLink>
                 <NavLink to={'/sign-up'}> Register </NavLink>
-                <NavLink to={'/about'}> Who am I? </NavLink>
                 <NavLink to={'/terms-condition'}> Terms of service </NavLink>
                 <NavLink to={'/privacy-policy'}> Privacy policy </NavLink>
             </div>

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import DemoCard from '../components/Home/Cards/DemoCard';
 import WhyCard from '../components/Home/Cards/WhyCard';
 import Footer from '../components/Home/Footer';
+import TemplateCard from '../components/Home/Cards/TemplateCard';
 
 const Home = () => {
     const to = useNavigate()
@@ -26,8 +27,6 @@ const Home = () => {
                     </div>
                 </div>   
     
-                <hr/>
-    
                 <div className='bg-black py-16 px-4'>
                     <div className='flex flex-col gap-16'>
                         <div className='flex flex-col gap-8 text-center'>
@@ -41,8 +40,6 @@ const Home = () => {
                         </div>
                     </div>
                 </div>   
-    
-                <hr/>
     
                 <div className='py-16 px-4'>
                     <div className='flex flex-col gap-16'>
@@ -78,8 +75,6 @@ const Home = () => {
                     </div>
                 </div>   
     
-                <hr/>
-    
                 <div className='bg-black py-16 px-4'>
                     <div className='flex flex-col gap-16'>
                         <div className='flex flex-col gap-8 text-center'>
@@ -88,9 +83,8 @@ const Home = () => {
                             <p className='text-foreground/40 text-xl max-w-lg mx-auto'> Each template is crafted to impress — choose the one that fits your industry. </p>
                         </div>
                         
-                        <div className='max-w-5xl mx-auto'>
-    
-                        </div>
+                        <TemplateCard/>
+                        
                     </div>
                 </div>     
                 
@@ -98,11 +92,10 @@ const Home = () => {
                     <div className='flex flex-col gap-8 items-center text-center rounded-xl max-w-5xl mx-auto py-10 bg-blue/40'>
                         <h4 className='text-sm font-bold text-blue'> START FREE TODAY </h4>                    
                         <h2 className='text-4xl font-bold'> Ready to Land Your Dream Job? </h2>
-                        <p className='text-foreground/40 text-xl'> Join 12,000+ professionals who built their resume with ResuMeUp. No credit card required. </p>
-                        <button className='bg-foreground py-2 px-6 rounded-xl text-blue font-bold'> Launch Builder </button>
+                        <p className='text-foreground/40 text-xl'> Join the professionals who built their resume with ResuMeUp. No credit card required. </p>
+                        <button className='bg-foreground py-2 px-6 rounded-xl text-blue font-bold cursor-pointer' onClick={() => to('/sign-in')}> Launch Builder </button>
                     </div>
                 </div>
-    
             </main>
             
             <Footer/>
