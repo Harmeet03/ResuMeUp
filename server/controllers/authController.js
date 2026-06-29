@@ -11,7 +11,9 @@ export const register = async (req, res) => {
         const existingUser = await User.findOne({ email });
         
         if(existingUser){
-            return res.status(400).json({ message: 'User already exists.' })
+            return res.status(400).json({ 
+                message: 'User already exists.' 
+            })
         }
 
         const safePassword = await bcrypt.hash(password, 16);
@@ -24,14 +26,14 @@ export const register = async (req, res) => {
         })
 
         generateToken(res, user._id, user.role);
-
-        res.status(201).json({
+        
+        password = undefined; // Clear password from response
+        console.log('User registered successfully:', user.name, '\nRole:', user.role);
+        
+        return res.status(201).json({
             name: user.name,
             role: user.role
         })
-
-        password = undefined; // Clear password from response
-        console.log('User registered successfully:', user.name, '\nRole:', user.role);
     }
     catch(e){
         errorHandler(e, req, res);
@@ -44,25 +46,30 @@ export const login = async (req, res) => {
 
     try{
         const user = await User.findOne({ email })
+
         if(!user){
-            return res.status(400).json({ message: 'No user found.' })
+            return res.status(400).json({ 
+                message: 'No user found.' 
+            })
         }
 
         let isMatch = await bcrypt.compare(password, user.password);
+
         if(!isMatch){
-            return res.status(400).json({ message: 'Invalid credentials.' })
+            return res.status(400).json({ 
+                message: 'Invalid password.' 
+            })
         }
 
        generateToken(res, user._id, user.role);
+       
+       password = undefined; // Clear password from response
+       console.log('User logged in successfully:', user.name, '\nRole:', user.role);
 
-        res.status(200).json({
+        return res.status(200).json({
             user: user.name,
             role: user.role
         })
-        
-        password = undefined; // Clear password from response
-        console.log('User logged in successfully:', user.name, '\nRole:', user.role);
-
     }
     catch(e){
         errorHandler(e, req, res);
@@ -76,7 +83,10 @@ export const logout = async (req, res) => {
             secure: process.env.NODE_ENV === 'production',
             sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax',
         });
-        res.status(200).json({ message: 'Logged out successfully.' }) 
+        
+        return res.status(200).json({ 
+            message: 'Logged out successfully.' 
+        }) 
     }
     catch(e){
         errorHandler(e, req, res);

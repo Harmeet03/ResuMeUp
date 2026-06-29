@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { type } from "node:os";
 
 const feedbackSchema = new mongoose.Schema(
     {
@@ -6,9 +7,17 @@ const feedbackSchema = new mongoose.Schema(
             type: String,
             required: true
         },
+        
         message: {
             type: String,
             required: true
+        },
+
+        rating: {
+            type: Number,
+            required: true,
+            min: 1,
+            max: 5
         }
     }, 
     
