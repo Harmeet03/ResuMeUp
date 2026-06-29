@@ -1,9 +1,13 @@
 import { useNavigate } from "react-router-dom"
-import {ArrowLeft} from 'lucide-react'
+
 import logo from '../assets/logo.svg';
+
+import {ArrowLeft} from 'lucide-react'
+import useTitle from '../hooks/useTitle'
 
 const Privacy = () => {
     const to = useNavigate()
+    useTitle('Privacy Policy | ResuMeUp')
 
     return(
         <>

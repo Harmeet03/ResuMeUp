@@ -1,47 +1,35 @@
+import { Heart } from 'lucide-react';
 import logo from '../../assets/logo.svg';
 import { useNavigate } from 'react-router-dom';
-import { profile } from '../../services/userAPI';
-import { useState, useEffect } from 'react';
 
 const Footer = () => {
-    const to = useNavigate();
-    const [data, setData] = useState('');
-
-    const getProfile = async () => {
-        try{
-            const userProfile = await profile();
-            setData(userProfile);
-            console.log("Profile fetched successfully.");
-        }
-        catch(err){
-            console.error("Error fetching profile:", err);
-        }
-    }
-
-    useEffect(() => {
-        getProfile();
-    }, [])
-
+    const to = useNavigate()
     return(
-        <>
-            <footer className='flex flex-col items-center gap-5 p-8 border-t border-gray-300'>
-                <div className=''>
-                    <img src={logo} className="w-40"/>
+        <footer className='border-t border-foreground print:hidden'>
+            <div className='flex flex-col sm:flex-row justify-around items-center py-4 max-w-6xl mx-auto'>
+                <img src={logo} className='w-80'/>
+                <div className='flex flex-col sm:flex-row gap-8 text-xl'>
+                    <p className='hover:underline cursor-pointer' onClick={() => to('/privacy-policy')}> Privacy </p>
+                    <p className='hover:underline cursor-pointer' onClick={() => to('/terms-condition')}> Terms </p>
                 </div>
-                <div className='flex flex-row justify-center gap-10'>
-                    <a href='mailto:harmeet.dhanjal2003@gmail.com' className='cursor-pointer'> Contact </a>
-                    <p onClick={() => {to('/terms-condition')}} className='cursor-pointer'> Terms </p>
-                    <p onClick={() => {to('/privacy-policy')}} className='cursor-pointer'> Privacy </p>
-                </div>
-                <div className='border-y p-2 border-gray-400'>
-                    <p> This website is for demonstration of my skills purpose only. No copyright intended </p>
-                </div>
-                <div>
-                    <p> <b><i>Logged in as:</i></b> {data.email} </p>
-                </div>
-            </footer>
-        </>
+            </div>
+
+            <hr className='text-gray-800'/>
+            
+            <div className='flex flex-col gap-2 text-center sm:flex-row justify-between max-w-2xl mx-auto text-white'>
+                <p> © 2026 ResuMeUp. All rights reserved. </p>
+                <p className='flex gap-1 justify-center'> Made with <Heart fill='red' className='text-red-600'/> by Harmeet Singh. </p>
+            </div>
+
+            <hr className='text-gray-800'/>
+            
+            <div className='flex justify-center gap-8 text-xs text-foreground py-2'>
+                <a target='__' href='https://linkedin.com/in/harmeetsinghdhanjal' className='cursor-pointer hover:underline'> LinkedIn </a>
+                <a target='__' href='https://github.com/Harmeet03' className='cursor-pointer hover:underline'> GitHub </a>
+                <a target='__' href='https://harmeets.dev' className='cursor-pointer hover:underline'> Portfolio </a>
+            </div>
+        </footer>
     )
 }
 
-export default Footer;
+export default Footer

@@ -5,6 +5,9 @@
     --foreground: rgb(143, 143, 255);
     --card: white;
     --blue: blue;
+    --gray: #64748b36;
+    --professional: #424242;
+    --red: red;
 }
 
 @theme inline {
@@ -12,4 +15,20 @@
     --color-foreground: var(--foreground);
     --color-card: var(--card);
     --color-blue: var(--blue);
+    --color-gray: var(--gray);
+    --color-professional: var(--professional);
+    --color-logo: var(--red);
 }   
+
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+}
+
+body {
+    height: auto !important;
+    -webkit-print-color-adjust: exaxct !important;
+    print-color-adjust: exact !important;
+}

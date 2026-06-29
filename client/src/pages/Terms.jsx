@@ -1,9 +1,14 @@
 import { useNavigate } from "react-router-dom"
-import {ArrowLeft} from 'lucide-react'
+
 import logo from '../assets/logo.svg';
+
+import {ArrowLeft} from 'lucide-react'
+import useTitle from '../hooks/useTitle'
+
 
 const Terms = () => {
     const to = useNavigate()
+    useTitle('Terms & Conditions | ResuMeUp')
 
     return(
         <>

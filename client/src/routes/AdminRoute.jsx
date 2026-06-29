@@ -26,7 +26,7 @@ const AdminRoute = ({ children }) => {
     if(loading){
         return(
             <div className="flex flex-row items-center justify-center h-screen gap-4">
-                <span className="border-6 border-white border-y-cyan-700 w-15 h-15 rounded-full animate-spin"/>
+                <span className="border-6 border-white border-y-blue border-x-transparent w-15 h-15 rounded-full animate-spin"/>
                 <p className="text-4xl"> Loading... </p>
             </div>
         )
