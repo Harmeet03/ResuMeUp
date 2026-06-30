@@ -33,7 +33,9 @@ app.get("/", (req, res) => {
 });
 
 app.get('/health', (req, res) => {
-    res.status(200).json({ status: 'OK', message: 'Server is healthy' });
+    res.status(200).json({ 
+        status: 'OK'
+    });
 });
 
 app.listen(PORT, () => {
