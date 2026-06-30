@@ -1,4 +1,7 @@
+import './App.css'
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
 import Home from './pages/Home.jsx'
 import Terms from './pages/Terms.jsx'
 import Privacy from './pages/Privacy.jsx'
@@ -11,12 +14,14 @@ import PublicRoute from './routes/PublicRoute.jsx'
 import Admin from './pages/Admin.jsx'
 import NotFound from './pages/NotFound.jsx'
 
-import './App.css'
+import Status from './components/common/Status.jsx'
 
 function App() {
+
   return (
     <>
       <Router>
+
         <Routes>
           <Route path="/" element={
             <PublicRoute>
@@ -54,6 +59,9 @@ function App() {
 
           <Route path='*' element={<NotFound/>}/>
         </Routes>
+
+        <Status/>
+
       </Router>
     </>
   )

@@ -68,7 +68,7 @@ const Sign_In = () => {
                     <p className="mb-6"> <input type="checkbox" name="Agree" required/> I agree with <span onClick={() => {to('/terms-condition')}} className="underline cursor-pointer text-foreground">Terms and conditions.</span> </p>
                     {error && <p className="text-red-500 mb-4 text-center"> {error} </p>}
                     {loading ? (
-                        <div className="bg-blue text-white p-4 rounded-xl cursor-pointer mb-4 flex flex-row justify-center"> <span className="border rounded-full border-3 border-x-white border-cyan-700 w-6 h-6 animate-spin"/> </div>
+                        <div className="bg-blue text-white p-4 rounded-xl cursor-pointer mb-4 flex flex-row justify-center"> <span className="border rounded-full border-3 border-x-transparent border-foreground w-6 h-6 animate-spin"/> </div>
                     ) : (
                         <button className="bg-blue text-white p-4 rounded-xl cursor-pointer mb-4" type="submit"> Get Started </button>
                     )}

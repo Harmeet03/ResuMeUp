@@ -65,11 +65,15 @@ const Resume = () => {
         }))
     }
 
-    
-
     return(
         <div className="max-w-7xl mx-auto">
-            {admin && (<p className="text-center bg-gray-200 text-xl"> You're admin. Visit <span className="underline cursor-pointer" onClick={() => {to('/admin')}}> Admin Portal </span> </p>)}
+            {
+                admin && (
+                    <p className="print:hidden text-center text-sm"> 
+                        Visit <span className="text-foreground cursor-pointer" onClick={() => {to('/admin')}}> Admin Portal </span> 
+                    </p>
+                )
+            }
             
             <div className='text-white flex items-center gap-8 text-lg pt-4 px-4 justify-center print:hidden'>
                 <div className={`p-2 cursor-pointer ${theme === 'Minimal' ? 'border' : 'border-0'}`} onClick={() => setTheme('Minimal')}>
