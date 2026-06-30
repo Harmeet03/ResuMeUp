@@ -16,6 +16,8 @@ import NotFound from './pages/NotFound.jsx'
 
 import Status from './components/common/Status.jsx'
 
+import { Analytics } from "@vercel/analytics/react"
+
 function App() {
 
   return (
@@ -61,6 +63,7 @@ function App() {
         </Routes>
 
         <Status/>
+        <Analytic/>
 
       </Router>
     </>
