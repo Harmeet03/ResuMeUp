@@ -63,7 +63,7 @@ function App() {
         </Routes>
 
         <Status/>
-        <Analytic/>
+        <Analytics/>
 
       </Router>
     </>
