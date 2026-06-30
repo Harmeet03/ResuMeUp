@@ -1,6 +1,6 @@
 const allowedOrigins = [ 
     'http://localhost:5173',
-    'https://app-resumeup.netlify.app'
+    'https://resumeup-app.vercel.app'
 ] 
 
 export const corsOptions = {
