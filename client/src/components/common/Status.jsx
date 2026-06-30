@@ -33,7 +33,7 @@ const Status = () => {
     }, [])
 
     return(
-        <span className='flex items-center bg-black gap-1 fixed bottom-5 left-2 p-2 rounded-lg'>
+        <span className='flex items-center bg-black gap-1 fixed bottom-5 left-2 p-2 rounded-lg print:hidden'>
           <Server className='text-foreground'/> : 
           {
             health === 'Online' ? (
